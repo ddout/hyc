@@ -1,0 +1,17 @@
+server:
+  port: 8900
+
+spring:
+  application:
+    name: hyc-logger
+  profiles:
+      active: "@spring.active@"
+  cloud:
+    config:
+      name: ${spring.application.name},global-server-config
+      profile: ${spring.profiles.active}
+      enabled: true
+      label: "@hyc.configure.label@"
+      uri: "http://@hyc.configure.ip@:@hyc.configure.port@"
+
+

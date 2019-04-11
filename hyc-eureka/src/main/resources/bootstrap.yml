@@ -1,0 +1,15 @@
+server:
+  port: 8700
+
+spring:
+  application:
+    name: hyc-eureka
+  profiles:
+      active: "@spring.active@"
+  cloud:
+    config:
+      name: ${spring.application.name},global-server-config
+      profile: ${spring.profiles.active}
+      enabled: true
+      label: "@hyc.configure.label@"
+      uri: "http://@hyc.configure.ip@:@hyc.configure.port@"

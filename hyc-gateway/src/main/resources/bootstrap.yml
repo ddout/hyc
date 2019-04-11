@@ -1,0 +1,24 @@
+hyc:
+  core:
+    handler:
+      exceptionHandler:
+        enabled: false
+server:
+  port: 8600
+
+spring:
+  application:
+    name: hyc-gateway
+  profiles:
+      active: "@spring.active@"
+  cloud:
+    config:
+      name: ${spring.application.name},global-server-config
+      profile: ${spring.profiles.active}
+      enabled: true
+      label: "@hyc.configure.label@"
+      uri: "http://@hyc.configure.ip@:@hyc.configure.port@"
+    gateway:
+      discovery:
+        locator:
+          lower-case-service-id: true

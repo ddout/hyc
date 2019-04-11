@@ -1,0 +1,100 @@
+server:
+  port: 8800
+
+spring:
+  application:
+    name: hyc-configure
+  profiles:
+      active: "@spring.active@"
+      include: subversion
+
+---
+spring:
+    profiles: dev
+    cloud:
+      config:
+        discovery:
+          enabled: false
+        profile: dev
+        enabled: true
+        fail-fast: true
+        server:
+          encrypt:
+            enabled: false
+          default-profile: dev
+          bootstrap: false
+          git:
+            uri: https://github.com/xxxxxxxxx     # 配置git仓库的地址
+            search-paths: config-repo                             # git仓库地址下的相对地址，可以配置多个，用,分割。
+            username:                                             # git仓库的账号
+            password:                                             # git仓库的密码
+            basedir: /Users/mac/Desktop                           # 本地存储目录
+            default-label: "@hyc.configure.label@"
+
+---
+#keytool -genkeypair -alias mytestkey -keyalg RSA -dname "CN=Web Server,OU=China,O=www.howardliu.cn,L=Beijing,S=Beijing,C=China" -keypass changeme -keystore config-service.jks -storepass letmein
+encrypt:
+  keyStore:
+    location: file:///home/soft/hyc/encrypt/config-service.jks
+    alias: mytestkey
+    password: letmein
+    secret: changeme
+spring:
+    profiles: test
+    cloud:
+      config:
+        discovery:
+          enabled: false
+        profile: test
+        enabled: true
+        fail-fast: true
+        server:
+          encrypt:
+            enabled: true
+          default-profile: test
+          bootstrap: false
+          git:
+            uri: https://github.com/xxxxxxxxx     # 配置git仓库的地址
+            search-paths: config-repo                             # git仓库地址下的相对地址，可以配置多个，用,分割。
+            username:                                             # git仓库的账号
+            password:                                             # git仓库的密码
+            basedir: /Users/mac/Desktop                           # 本地存储目录
+            default-label: "@hyc.configure.label@"
+
+
+---
+#keytool -genkeypair -alias mytestkey -keyalg RSA -dname "CN=Web Server,OU=China,O=www.howardliu.cn,L=Beijing,S=Beijing,C=China" -keypass changeme -keystore config-service.jks -storepass letmein
+encrypt:
+  keyStore:
+    location: file:///Users/mac/Desktop/config-service.jks
+    alias: mytestkey
+    password: letmein
+    secret: changeme
+spring:
+    profiles: prod
+    cloud:
+      config:
+        discovery:
+          enabled: false
+        profile: prod
+        enabled: true
+        fail-fast: true
+        server:
+          encrypt:
+            enabled: true
+          default-profile: prod
+          bootstrap: false
+          git:
+            uri: https://github.com/xxxxxxxxx     # 配置git仓库的地址
+            search-paths: config-repo                             # git仓库地址下的相对地址，可以配置多个，用,分割。
+            username:                                             # git仓库的账号
+            password:                                             # git仓库的密码
+            basedir: /Users/mac/Desktop                           # 本地存储目录
+            default-label: "@hyc.configure.label@"
+#          svn:
+#            username: user
+#            password: pwd
+#            search-paths: /**
+#            default-label: "@hyc.configure.label@"
+#            uri: https://url
+#            basedir: local-path

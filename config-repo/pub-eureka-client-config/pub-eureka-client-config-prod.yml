@@ -1,0 +1,12 @@
+eureka-user:
+  name: '{cipher}AQAGFs8pnAd7saC8HpyrSIboA6x51buso/uHcjRt8UZ16dCe6iOMtTlybx8HhwNUwQSK7jevb4YcjrNUaeFwDedf9bR8M6p32+Y8RdUBPBCbpOFP7FWG7oOkDjkG6qzw58Fgy9fYWa7ssIWQvsSTKXnp3gfHk+FqLE3S2M+WtUUKuA6V8ftpDGlvdo8pg95nCk/+fGPPjScNCnlyi2afIAHgP8EsiezeJPpjAuihS1vIhI5V2gYbuZldNsrxAIC/C/OjzI9IPkfTciB62WRXm0oL/x7c2SG9K8IwquHgM80FzOtAoujdB9jjDbV8Xb0tNlF/jWongXZRMXvGpH23+WBTXwr8yG4MeMVdsbLSaVXxNJRTGaibewzULqvuSneUsns='
+  password: '{cipher}AQB5xNNOHFp6/kanV/gQAjUzXviBpn81x7Lzp7MxLdedY90Dn2qOXXk+3y6nnDx5KEJC50ZnFOflXAR6v5xJ5Tl4p6o8LnCRD2TGl55XoHbx25UtQ/p6oGujIC/DZxCXnlkkAXHzOU0rCGZPQHWE0E+wPC+dT9Amj3zIZam0fmAeQt6J7hTfyAuXTqvnMYDe1dszeraMUwG1lJGu72mnxTmgblepEiobHeQOnzr1C3htJ/7T+dapRecgXIEgvlFF90BlyhudI7B1zn3IHK1jHWdu9JWIEGgMUmjEeSRRa/CPahPRj32jGchlVwe2D3+z/MgsWVTLycT3zYFp375bbIaCy2dHd96hpjA+Cv24yeH2FrB5+SZtI97PYvLMMW3mcIyfL+iy6bM+3c2bsB1GLya6'
+  defaultZoneUrls: http://${eureka-user.name}:${eureka-user.password}@127.0.0.1:8700/eureka/
+
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${eureka-user.defaultZoneUrls}
+    healthcheck:
+        enabled: true
