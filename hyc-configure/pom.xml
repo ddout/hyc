@@ -33,11 +33,11 @@
             <artifactId>spring-cloud-starter-config</artifactId>
         </dependency>
         <!--config server need read svn-->
-        <dependency>
-            <groupId>org.tmatesoft.svnkit</groupId>
-            <artifactId>svnkit</artifactId>
-            <version>1.8.10</version>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>org.tmatesoft.svnkit</groupId>-->
+            <!--<artifactId>svnkit</artifactId>-->
+            <!--<version>1.8.10</version>-->
+        <!--</dependency>-->
         <!--logger-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>

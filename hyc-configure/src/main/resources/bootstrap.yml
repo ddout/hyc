@@ -24,7 +24,7 @@ spring:
           default-profile: dev
           bootstrap: false
           git:
-            uri: https://github.com/xxxxxxxxx     # 配置git仓库的地址
+            uri: https://github.com/ddout/hyc.git    # 配置git仓库的地址
             search-paths: config-repo                             # git仓库地址下的相对地址，可以配置多个，用,分割。
             username:                                             # git仓库的账号
             password:                                             # git仓库的密码
@@ -54,7 +54,7 @@ spring:
           default-profile: test
           bootstrap: false
           git:
-            uri: https://github.com/xxxxxxxxx     # 配置git仓库的地址
+            uri: https://github.com/ddout/hyc.git    # 配置git仓库的地址
             search-paths: config-repo                             # git仓库地址下的相对地址，可以配置多个，用,分割。
             username:                                             # git仓库的账号
             password:                                             # git仓库的密码
@@ -85,7 +85,7 @@ spring:
           default-profile: prod
           bootstrap: false
           git:
-            uri: https://github.com/xxxxxxxxx     # 配置git仓库的地址
+            uri: https://github.com/ddout/hyc.git    # 配置git仓库的地址
             search-paths: config-repo                             # git仓库地址下的相对地址，可以配置多个，用,分割。
             username:                                             # git仓库的账号
             password:                                             # git仓库的密码
