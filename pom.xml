@@ -192,7 +192,7 @@
                 <spring.active>dev</spring.active>
                 <hyc.configure.ip>127.0.0.1</hyc.configure.ip>
                 <hyc.configure.port>8800</hyc.configure.port>
-                <hyc.configure.label>trunk</hyc.configure.label>
+                <hyc.configure.label>config-repo</hyc.configure.label>
             </properties>
             <activation>
                 <activeByDefault>true</activeByDefault>
@@ -204,7 +204,7 @@
                 <spring.active>test</spring.active>
                 <hyc.configure.ip>127.0.0.1</hyc.configure.ip>
                 <hyc.configure.port>8800</hyc.configure.port>
-                <hyc.configure.label>trunk</hyc.configure.label>
+                <hyc.configure.label>config-repo</hyc.configure.label>
             </properties>
         </profile>
         <profile>
@@ -213,7 +213,7 @@
                 <spring.active>prod</spring.active>
                 <hyc.configure.ip>127.0.0.1</hyc.configure.ip>
                 <hyc.configure.port>8800</hyc.configure.port>
-                <hyc.configure.label>trunk</hyc.configure.label>
+                <hyc.configure.label>config-repo</hyc.configure.label>
             </properties>
         </profile>
 
