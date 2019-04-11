@@ -1,7 +1,7 @@
 package com.ddout.hyc.exceptions;
 
 
-import com.cdhy.hyc.exceptions.*;
+import com.ddout.hyc.exceptions.*;
 
 public enum ResponseCode {
     /**
