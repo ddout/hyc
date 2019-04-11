@@ -1,0 +1,26 @@
+
+
+eureka-user:
+  name: '{cipher}AQBAwC/0eepA3KtXlC8FEuI0heGn+ZlBualWt772kPJaPGkn5HBwq5+//+VI4re7ItUtLTPA8eRVx/akFtvMDkBnWpqVxLGCQdFjUY8yj2MLsyh25GJDWIKTnPkueDf/0e3tWwXAaWOVva0qh296aE0JvasLyf8lj5TBtrqYUEm0pS+Wtcw+FAjq1LOPMh53r0MmB+HD/lNxs5DEl9fVGT2Rk3ZUCR++CnfB28v1N3l9tl7FaOGei57G5bd5rl2irTb4aPMrKJdl5xZ9wAW0qZ3CF5be6wH4ZKVn7RsbgCz9drhUf/vkA0ElqSKHxUQp/0zBLdSa+0dliMt2OQ5vDVpsGlwm77CbMjpmmcqEE+SyHu5q+N+S3e1sDbBG6COegwc='
+  password: '{cipher}AQBAwC/0eepA3KtXlC8FEuI0heGn+ZlBualWt772kPJaPGkn5HBwq5+//+VI4re7ItUtLTPA8eRVx/akFtvMDkBnWpqVxLGCQdFjUY8yj2MLsyh25GJDWIKTnPkueDf/0e3tWwXAaWOVva0qh296aE0JvasLyf8lj5TBtrqYUEm0pS+Wtcw+FAjq1LOPMh53r0MmB+HD/lNxs5DEl9fVGT2Rk3ZUCR++CnfB28v1N3l9tl7FaOGei57G5bd5rl2irTb4aPMrKJdl5xZ9wAW0qZ3CF5be6wH4ZKVn7RsbgCz9drhUf/vkA0ElqSKHxUQp/0zBLdSa+0dliMt2OQ5vDVpsGlwm77CbMjpmmcqEE+SyHu5q+N+S3e1sDbBG6COegwc='
+  defaultZoneUrls: http://${eureka-user.name}:${eureka-user.password}@118.123.247.201:8701/eureka/,http://${eureka-user.name}:${eureka-user.password}@118.123.247.201:8702/eureka/,http://${eureka-user.name}:${eureka-user.password}@118.123.247.201:8703/eureka/,http://${eureka-user.name}:${eureka-user.password}@118.123.247.201:8704/eureka/
+
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${eureka-user.defaultZoneUrls}
+    healthcheck:
+        enabled: true
+
+spring:
+  rabbitmq:
+    addresses: 127.0.0.1
+    port: 5672
+    username: sleuth
+    password: sleuth
+    virtual-host: sleuth
+  sleuth:
+    propagation-keys:
+      - x-hyc-session-id
+      - x-hyc-user-id

@@ -1,0 +1,26 @@
+
+
+eureka-user:
+  name: eureka
+  password: eureka
+  defaultZoneUrls: http://${eureka-user.name}:${eureka-user.password}@127.0.0.1:8700/eureka/
+
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${eureka-user.defaultZoneUrls}
+    healthcheck:
+        enabled: true
+
+spring:
+  rabbitmq:
+    addresses: 127.0.0.1
+    port: 5672
+    username: sleuth
+    password: sleuth
+    virtual-host: sleuth
+  sleuth:
+    propagation-keys:
+      - x-hyc-session-id
+      - x-hyc-user-id
