@@ -6,7 +6,7 @@ spring:
     name: hyc-configure
   profiles:
       active: "@spring.active@"
-      include: subversion
+      include: git
 
 ---
 spring:
