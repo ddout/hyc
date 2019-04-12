@@ -6,7 +6,7 @@ spring:
     name: hyc-configure
   profiles:
       active: "@spring.active@"
-      include: git
+      #include: git
 
 ---
 spring:
@@ -25,11 +25,7 @@ spring:
           bootstrap: false
           git:
             uri: https://github.com/ddout/hyc.git    # 配置git仓库的地址
-            search-paths: config-repo                             # git仓库地址下的相对地址，可以配置多个，用,分割。
-            username:                                             # git仓库的账号
-            password:                                             # git仓库的密码
-            basedir: /Users/mac/Desktop                           # 本地存储目录
-            default-label: "@hyc.configure.label@"
+            search-paths: config-repo
 
 ---
 #keytool -genkeypair -alias mytestkey -keyalg RSA -dname "CN=Web Server,OU=China,O=www.howardliu.cn,L=Beijing,S=Beijing,C=China" -keypass changeme -keystore config-service.jks -storepass letmein
@@ -55,11 +51,7 @@ spring:
           bootstrap: false
           git:
             uri: https://github.com/ddout/hyc.git    # 配置git仓库的地址
-            search-paths: config-repo                             # git仓库地址下的相对地址，可以配置多个，用,分割。
-            username:                                             # git仓库的账号
-            password:                                             # git仓库的密码
-            basedir: /Users/mac/Desktop                           # 本地存储目录
-            default-label: "@hyc.configure.label@"
+            search-paths: config-repo
 
 
 ---
@@ -86,11 +78,7 @@ spring:
           bootstrap: false
           git:
             uri: https://github.com/ddout/hyc.git    # 配置git仓库的地址
-            search-paths: config-repo                             # git仓库地址下的相对地址，可以配置多个，用,分割。
-            username:                                             # git仓库的账号
-            password:                                             # git仓库的密码
-            basedir: /Users/mac/Desktop                           # 本地存储目录
-            default-label: "@hyc.configure.label@"
+            search-paths: config-repo
 #          svn:
 #            username: user
 #            password: pwd
