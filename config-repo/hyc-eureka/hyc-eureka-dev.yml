@@ -1,10 +1,10 @@
 
 
-spring:
-  security:
-    user:
-      name: ${eureka-user.name}
-      password: ${eureka-user.password}
+#spring:
+#  security:
+#    user:
+#      name: ${eureka-user.name}
+#      password: ${eureka-user.password}
 
 eureka:
   instance:
@@ -24,9 +24,9 @@ eureka:
     #获取实例时是否过滤，只保留UP状态的实例
     filter-only-up-instances: true
     #自己也注册到注册中心
-    register-with-eureka: true
+    register-with-eureka: false
     #需要从其他eureka节点获取注册信息
     fetch-registry: false
-    
+
 
 

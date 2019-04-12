@@ -6,7 +6,6 @@ spring:
     name: hyc-configure
   profiles:
       active: "@spring.active@"
-      #include: git
 
 ---
 spring:
@@ -26,6 +25,7 @@ spring:
           git:
             uri: https://github.com/ddout/hyc.git    # 配置git仓库的地址
             search-paths: config-repo
+            default-label: "@hyc.configure.label@"
 
 ---
 #keytool -genkeypair -alias mytestkey -keyalg RSA -dname "CN=Web Server,OU=China,O=www.howardliu.cn,L=Beijing,S=Beijing,C=China" -keypass changeme -keystore config-service.jks -storepass letmein
@@ -52,6 +52,7 @@ spring:
           git:
             uri: https://github.com/ddout/hyc.git    # 配置git仓库的地址
             search-paths: config-repo
+            default-label: "@hyc.configure.label@"
 
 
 ---
@@ -79,6 +80,7 @@ spring:
           git:
             uri: https://github.com/ddout/hyc.git    # 配置git仓库的地址
             search-paths: config-repo
+            default-label: "@hyc.configure.label@"
 #          svn:
 #            username: user
 #            password: pwd
