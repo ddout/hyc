@@ -1,10 +1,10 @@
 
 
-#spring:
-#  security:
-#    user:
-#      name: ${eureka-user.name}
-#      password: ${eureka-user.password}
+spring:
+  security:
+    user:
+      name: ${eureka-user.name}
+      password: ${eureka-user.password}
 
 eureka:
   instance:
