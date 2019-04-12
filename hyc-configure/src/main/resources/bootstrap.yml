@@ -26,6 +26,7 @@ spring:
             uri: https://github.com/ddout/hyc.git    # 配置git仓库的地址
             search-paths: config-repo
             default-label: "@hyc.configure.label@"
+            basedir: /Users/mac/Desktop/trunk
 
 ---
 #keytool -genkeypair -alias mytestkey -keyalg RSA -dname "CN=Web Server,OU=China,O=www.howardliu.cn,L=Beijing,S=Beijing,C=China" -keypass changeme -keystore config-service.jks -storepass letmein
