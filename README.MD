@@ -10,6 +10,7 @@ HYC-Hello
 | hyc-gateway|8600-8699|网关.使用Nginx做前端代理 |
 | hyc-eureka|8700-8799|注册中心Eureka服务 |
 | hyc-configure|8800-8899|配置中心(集群使用Nginx负载,不加入euraka) |
+| hyc-log|8900-8999|统一日志sleuth |
 | hyc-monitor|9000-9099|监控(集群使用Nginx负载) |
 | hyc-services|00000-00000|具体业务实现包 |
 
