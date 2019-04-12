@@ -14,6 +14,10 @@ eureka:
         enabled: true
 
 spring:
+  security:
+    user:
+      name: ${eureka-user.name}
+      password: ${eureka-user.password}
   rabbitmq:
     addresses: 127.0.0.1
     port: 5672
