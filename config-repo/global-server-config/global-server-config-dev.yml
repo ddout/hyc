@@ -1,8 +1,8 @@
 
 
 eureka-user:
-  name: eureka
-  password: eureka
+  name: ddout
+  password: ddout
   defaultZoneUrls: http://${eureka-user.name}:${eureka-user.password}@127.0.0.1:8700/eureka/
 
 
