@@ -1,6 +1,5 @@
-HYC-Hello 
-    Yare
-    Cloud
+HYC
+Hallucination Yacht Core
 
 ---
 #### 模块说明
