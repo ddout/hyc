@@ -195,7 +195,7 @@
             <id>dev</id>
             <properties>
                 <spring.active>dev</spring.active>
-                <hyc.configure.ip>127.0.0.1</hyc.configure.ip>
+                <hyc.configure.ip>192.168.11.234</hyc.configure.ip>
                 <hyc.configure.port>8800</hyc.configure.port>
                 <hyc.configure.label>master</hyc.configure.label>
             </properties>
@@ -207,7 +207,7 @@
             <id>test</id>
             <properties>
                 <spring.active>test</spring.active>
-                <hyc.configure.ip>127.0.0.1</hyc.configure.ip>
+                <hyc.configure.ip>192.168.11.234</hyc.configure.ip>
                 <hyc.configure.port>8800</hyc.configure.port>
                 <hyc.configure.label>master</hyc.configure.label>
             </properties>
@@ -216,7 +216,7 @@
             <id>prod</id>
             <properties>
                 <spring.active>prod</spring.active>
-                <hyc.configure.ip>127.0.0.1</hyc.configure.ip>
+                <hyc.configure.ip>192.168.11.234</hyc.configure.ip>
                 <hyc.configure.port>8800</hyc.configure.port>
                 <hyc.configure.label>master</hyc.configure.label>
             </properties>
