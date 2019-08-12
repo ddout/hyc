@@ -183,6 +183,11 @@
                 <enabled>false</enabled>
             </releases>
         </repository>
+        <repository>
+            <id>hy</id>
+            <name>hy</name>
+            <url>http://mvn.hydzfp.com:8081/nexus/content/groups/public/</url>
+        </repository>
     </repositories>
 
     <profiles>
