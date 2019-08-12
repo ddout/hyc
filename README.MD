@@ -46,4 +46,5 @@ Hallucination Yacht Core
 
 
 rabbitmq: guest/guest
+https://www.cnblogs.com/yufeng218/p/9452621.html
 mysql5.7: root/ZhipengWang2012@
