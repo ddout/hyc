@@ -16,6 +16,7 @@
     <module>ei-access</module>
     <module>ei-site-buss</module>
     <module>hyc-access</module>
+    <module>base-service-api</module>
   </modules>
   <packaging>pom</packaging>
 
