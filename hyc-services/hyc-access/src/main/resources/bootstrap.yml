@@ -1,19 +1,18 @@
+
 server:
-  port: 22000
+  port: 21000
 
 spring:
   application:
-    name: ei-site-buss
+    name: ei-access
   profiles:
-    active: "@spring.active@"
+      active: "@spring.active@"
   cloud:
     config:
-      name: ${spring.application.name},global-server-config,data-source-mysql
+      name: ${spring.application.name},global-server-config
       profile: ${spring.profiles.active}
       enabled: true
       label: "@hyc.configure.label@"
       uri: "http://@hyc.configure.ip@:@hyc.configure.port@"
-
-
 
 

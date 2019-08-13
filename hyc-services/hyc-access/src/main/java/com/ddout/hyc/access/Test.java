@@ -14,7 +14,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class Test {
-
     public static Logger logger = LoggerFactory.getLogger(Test.class);
     @Autowired
     private SessionPropagationBean sessionPropagationBean;
@@ -41,7 +40,6 @@ public class Test {
 
         return ResponseData.success(response);
     }
-
 
 
 }
