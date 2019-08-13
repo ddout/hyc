@@ -1,0 +1,22 @@
+server:
+  port: 30000
+
+spring:
+  application:
+    name: hyc-web-admin
+  profiles:
+    active: "@spring.active@"
+  cloud:
+    config:
+      name: ${spring.application.name},global-server-config,data-source-mysql
+      profile: ${spring.profiles.active}
+      enabled: true
+      label: "@hyc.configure.label@"
+      uri: "http://@hyc.configure.ip@:@hyc.configure.port@"
+
+
+
+hyc:
+  gateway:
+    ip: @hyc.gateway.ip@
+    port: @hyc.gateway.port@
