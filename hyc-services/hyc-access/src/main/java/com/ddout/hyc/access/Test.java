@@ -34,7 +34,7 @@ public class Test {
         json2.put("pk", request.getInt("pk"));
 
 
-        JSONObject response = restServiceAPI.post(url2, json2);
+        JSONObject response = restServiceAPI.rest(url2, json2);
 
         logger.debug(response.toString());
 

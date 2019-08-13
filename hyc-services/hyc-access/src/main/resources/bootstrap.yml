@@ -16,3 +16,7 @@ spring:
       uri: "http://@hyc.configure.ip@:@hyc.configure.port@"
 
 
+hyc:
+  gateway:
+    ip: @hyc.gateway.ip@
+    port: @hyc.gateway.port@

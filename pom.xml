@@ -198,6 +198,8 @@
                 <spring.active>dev</spring.active>
                 <hyc.configure.ip>192.168.11.234</hyc.configure.ip>
                 <hyc.configure.port>8800</hyc.configure.port>
+                <hyc.gateway.ip>192.168.11.234</hyc.gateway.ip>
+                <hyc.gateway.port>8600</hyc.gateway.port>
                 <hyc.configure.label>master</hyc.configure.label>
             </properties>
             <activation>
@@ -210,6 +212,8 @@
                 <spring.active>test</spring.active>
                 <hyc.configure.ip>192.168.11.234</hyc.configure.ip>
                 <hyc.configure.port>8800</hyc.configure.port>
+                <hyc.gateway.ip>192.168.11.234</hyc.gateway.ip>
+                <hyc.gateway.port>8600</hyc.gateway.port>
                 <hyc.configure.label>master</hyc.configure.label>
             </properties>
         </profile>
@@ -219,6 +223,8 @@
                 <spring.active>prod</spring.active>
                 <hyc.configure.ip>192.168.11.234</hyc.configure.ip>
                 <hyc.configure.port>8800</hyc.configure.port>
+                <hyc.gateway.ip>192.168.11.234</hyc.gateway.ip>
+                <hyc.gateway.port>8600</hyc.gateway.port>
                 <hyc.configure.label>master</hyc.configure.label>
             </properties>
         </profile>

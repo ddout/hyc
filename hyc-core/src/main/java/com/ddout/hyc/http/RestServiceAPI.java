@@ -10,6 +10,8 @@ import com.ddout.hyc.sleuth.SessionPropagationBean;
 import org.apache.http.HttpStatus;
 import org.apache.http.entity.ContentType;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
 import java.lang.reflect.Constructor;
@@ -20,7 +22,13 @@ import java.util.Map;
  * 用于框架内组件Rest接口通讯工具
  */
 @Component
+@ConfigurationProperties(prefix = "hyc")
 public class RestServiceAPI {
+
+    @Value("${hyc.gateway.ip}")
+    private String gatewayIP;
+    @Value("${hyc.gateway.port}")
+    private int gatewayPort;
 
     @Autowired
     private SessionPropagationBean sessionPropagationBean;
@@ -32,11 +40,22 @@ public class RestServiceAPI {
     /**
      * 发送post请求(附带追踪信息)
      *
+     * @param uri 请求路径
+     * @param jsonData 请求数据
+     * @return
+     */
+    public JSONObject rest(String uri, JSONObject jsonData) {
+        String url = "http://" + gatewayIP + ":" + gatewayPort + "/" + uri;
+        return post(url, jsonData);
+    }
+    /**
+     * 发送post请求(附带追踪信息)
+     *
      * @param url      请求路径
      * @param jsonData 请求数据
      * @return
      */
-    public JSONObject post(String url, JSONObject jsonData) {
+    private JSONObject post(String url, JSONObject jsonData) {
         //
         Map<String, String> headers = sessionPropagationBean.getAll();
         headers.put("Content-Type", ContentType.APPLICATION_JSON.toString());

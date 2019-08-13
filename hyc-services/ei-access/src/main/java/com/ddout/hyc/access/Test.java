@@ -22,20 +22,20 @@ public class Test {
     private RestServiceAPI restServiceAPI;
 
     @RequestMapping(value = "test")
-    public ResponseData test(@RequestBody RequestData request){
+    public ResponseData test(){
         logger.debug(JSONObject.toJSONString(sessionPropagationBean.getAll()));
         //
-        logger.debug(request.toString());
+//        logger.debug(request.toString());
 
-        String url2 = "http://127.0.0.1:8600/ei-site-buss/test";
+        String url2 = "ei-site-buss/test";
         JSONObject json2 = new JSONObject();
         json2.put("a", "1");
         json2.put("b", "12.232323141414");
         json2.put("c", "你好");
-        json2.put("pk", request.getInt("pk"));
+//        json2.put("pk", request.getInt("pk"));
 
 
-        JSONObject response = restServiceAPI.post(url2, json2);
+        JSONObject response = restServiceAPI.rest(url2, json2);
 
         logger.debug(response.toString());
 
