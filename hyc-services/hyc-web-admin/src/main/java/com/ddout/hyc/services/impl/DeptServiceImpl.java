@@ -12,7 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class DeptServiceImpl extends BaseService<Map> implements IDeptService {
+public class DeptServiceImpl extends BaseService<Dept> implements IDeptService {
 
   @Autowired
   private IDeptDao deptDao;
@@ -44,7 +44,7 @@ public class DeptServiceImpl extends BaseService<Map> implements IDeptService {
   }
 
   @Override
-  public List<Map> list(Map<String, Object> map) {
+  public List<Dept> list(Map<String, Object> map) {
     return deptDao.list(map);
   }
 

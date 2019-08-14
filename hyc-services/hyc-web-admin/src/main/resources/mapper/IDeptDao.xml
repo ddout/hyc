@@ -4,7 +4,7 @@
 
 <mapper namespace="com.ddout.hyc.dao.IDeptDao">
 
-  <select id="list" parameterType="map" resultType="map">
+  <select id="list" parameterType="map" resultType="com.ddout.hyc.vo.Dept">
         select * from dept
         where 1=1
         limit #{start},#{limit}

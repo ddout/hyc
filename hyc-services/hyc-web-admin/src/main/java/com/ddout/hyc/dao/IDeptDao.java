@@ -6,6 +6,6 @@ import java.util.List;
 import java.util.Map;
 
 public interface IDeptDao extends BaseMapper<Dept> {
-  List<Map> list(Map<String,Object> map);
+  List<Dept> list(Map<String,Object> map);
   int listCount(Map<String,Object> map);
 }
