@@ -4,6 +4,7 @@ import com.ddout.hyc.bean.PageBean;
 import com.ddout.hyc.bean.RequestData;
 import com.ddout.hyc.bean.ResponseData;
 import com.ddout.hyc.services.IDeptService;
+import com.ddout.hyc.vo.Dept;
 import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -37,7 +38,7 @@ public class DeptControl {
 
   @RequestMapping(value = "listPage")
   public ResponseData listPage(@RequestBody RequestData requestData) {
-    PageBean<Map> page = deptService.listPage(requestData);
+    PageBean<Dept> page = deptService.listPage(requestData);
     return ResponseData.success(page);
   }
 

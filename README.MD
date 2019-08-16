@@ -51,3 +51,5 @@ rabbitmq: guest/guest
 mysql5.7: root/ZhipengWang2012@
 
 test
+
+

@@ -1,5 +1,6 @@
 package com.ddout.hyc.control;
 
+import com.alibaba.fastjson.JSONObject;
 import com.ddout.hyc.bean.PageBean;
 import com.ddout.hyc.bean.RequestData;
 import com.ddout.hyc.bean.ResponseData;
@@ -17,6 +18,17 @@ public class UserControl {
 
   @Autowired
   private IUserService userService;
+
+  @RequestMapping(value = "login")
+  public ResponseData login(@RequestBody RequestData requestData) {
+    JSONObject userInfo = new JSONObject();
+    userInfo.put("token","admin-token");
+    userInfo.put("roles",new String[]{"admin"});
+    userInfo.put("introduction","我是super administrator");
+    userInfo.put("avatar","https://wpimg.wallstcn.com/f778738c-e4f8-4870-b634-56703b4acafe.gif");
+    userInfo.put("name","Super Admin");
+    return ResponseData.success(userInfo);
+  }
 
   @RequestMapping(value = "add")
   public ResponseData add(@RequestBody RequestData requestData) {

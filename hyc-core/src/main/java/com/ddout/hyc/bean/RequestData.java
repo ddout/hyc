@@ -52,7 +52,10 @@ public class RequestData implements Serializable {
      * @return JSONObject
      */
     public JSONObject getParamJson() {
-        return paramJson;
+        if(null == this.paramJson){
+            return new JSONObject();
+        }
+        return this.paramJson;
     }
 
     /**
