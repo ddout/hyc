@@ -32,7 +32,7 @@
         <spring.cloud.version>Finchley.RELEASE</spring.cloud.version>
         <spring.cloud.starter>2.0.0.RELEASE</spring.cloud.starter>
         <spring.boot.admin>2.0.1</spring.boot.admin>
-        <fastjson.version>1.2.47</fastjson.version>
+        <fastjson.version>1.2.83</fastjson.version>
     </properties>
 
     <dependencyManagement>
